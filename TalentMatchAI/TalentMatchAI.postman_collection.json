@@ -1,0 +1,76 @@
+{
+  "info": {
+    "name": "TalentMatchAI",
+    "_postman_id": "talentmatchai-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Candidate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/candidates",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["candidates"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"githubUsername\": \"johndoe\",\n  \"skills\": [\"Java\", \"Spring Boot\", \"SQL\"],\n  \"yearsOfExperience\": 3,\n  \"bio\": \"Développeur backend passionné\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Get All Candidates",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/candidates",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["candidates"]
+        }
+      }
+    },
+    {
+      "name": "Get Candidate By Id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/candidates/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["candidates", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update Candidate",
+      "request": {
+        "method": "PUT",
+        "url": {
+          "raw": "http://localhost:8080/candidates/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["candidates", "1"]
+        }
+      }
+    }
+  ]
+}
