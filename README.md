@@ -97,4 +97,4 @@ Le script crée un candidat, trois offres d'emploi, lance les analyses de matchi
 | `GET` | `/matching/candidate/{candidateId}` | Résultats par candidat |
 | `GET` | `/matching/job/{jobOfferId}` | Résultats par offre |
 
-Une collection Postman est disponible à la racine : `TalentMatchAI.postman_collection.json`.
+
